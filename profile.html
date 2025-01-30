@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-card">
+        <!-- Profile Picture -->
+        <img src="Samuel.jpg" alt="Profile Picture" data-testid="profilePicture">
+
+        <!-- Full Name -->
+        <h1 data-testid="fullName">Samuel Akintoye Ayomide</h1>
+
+        <!-- Job Title -->
+        <p data-testid="jobTitle">IT Support / Frontend Developer</p>
+
+        <!-- Short Bio -->
+        <p data-testid="shortBio">I am Samuel Ayomide Akintoye, a passionate IT professional with over 5 years of experience in IT support. Currently pursuing a minor in Computer Science, I’m driven by a desire to continuously learn and grow in the tech industry. I am skilled in troubleshooting, system maintenance, and I am actively expanding my knowledge in frontend development, particularly with React. My goal is to leverage my expertise to create seamless user experiences and contribute to innovative projects.</p>
+
+        <!-- Current Location -->
+        <p data-testid="currentLocation">Lagos, Nigeria</p>
+
+        <!-- Email Address -->
+        <p data-testid="emailAddress"><a href="mailto:samuelayomide889@gmail.com">samuelayomide889@gmail.com</a></p>
+
+        <!-- Social Links -->
+        <div data-testid="socialLinks">
+            <a href="https://www.linkedin.com/in/samuel-akintoye-820126226/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Samuelogooluwa" target="_blank">GitHub</a>
+            <a href="https://x.com/SamuelA10019253" target="_blank">Twitter</a>
+        </div>
+
+        <!-- Current Time in UTC -->
+        <p data-testid="currentTimeUTC" id="utcTime"></p>
+    </div>
+
+<script src="script.js">
+
+function updateUTC() {
+    const utcTime = new Date().toISOString();
+    document.getElementById('utcTime').innerText = `Current Time (UTC): ${utcTime}`;
+}
+
+// Call the update function when the page loads
+window.onload = updateUTC;
+
+</script>
+</body>
+</html>
